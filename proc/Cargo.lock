@@ -35,13 +35,6 @@ dependencies = [
 name = "tonic_catch"
 version = "0.1.0"
 dependencies = [
- "tonic_catch_proc",
-]
-
-[[package]]
-name = "tonic_catch_proc"
-version = "0.1.0"
-dependencies = [
  "proc-macro2",
  "quote",
  "syn",
