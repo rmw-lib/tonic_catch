@@ -1,5 +1,6 @@
 [package]
 name = "tonic_catch_proc"
+repository = "https://github.com/rmw-lib/tonic_catch"
 version = "0.1.0"
 edition = "2021"
 license = "AGPL-3.0-or-later"
