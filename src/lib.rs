@@ -1,6 +1,5 @@
 mod expand;
 mod parse;
-mod receiver;
 
 use crate::{expand::expand, parse::Item};
 use proc_macro::TokenStream;

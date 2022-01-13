@@ -1,10 +1,5 @@
-use proc_macro2::{Group, Span, TokenStream, TokenTree};
-use std::iter::FromIterator;
-use syn::visit_mut::{self, VisitMut};
-use syn::{
-    ImplItem,
-};
 use crate::Item;
+use syn::ImplItem;
 
 pub fn expand(input: &mut Item) {
   match input {
@@ -12,9 +7,7 @@ pub fn expand(input: &mut Item) {
       for inner in &mut input.items {
         if let ImplItem::Method(method) = inner {
           let sig = &mut method.sig;
-          if sig.asyncness.is_some() {
-
-          }
+          if sig.asyncness.is_some() {}
         }
       }
     }
