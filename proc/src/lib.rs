@@ -11,7 +11,7 @@ pub fn tonic_catch(_: TokenStream, input: TokenStream) -> TokenStream {
   let mut item = parse_macro_input!(input as Item);
   expand(&mut item);
   TokenStream::from(quote!(
-    #[async_trait]
+    #[async_trait::async_trait]
     #item
   ))
 }
