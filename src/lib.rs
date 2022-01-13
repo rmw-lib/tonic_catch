@@ -8,7 +8,5 @@ use crate::parse::Item;
 #[proc_macro_attribute]
 pub fn tonic_catch(_: TokenStream, input: TokenStream) -> TokenStream {
   let mut item = parse_macro_input!(input as Item);
-
-  println!("{:?}", input);
-  input
+  TokenStream::from(quote!(#item))
 }

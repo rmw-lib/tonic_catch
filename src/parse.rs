@@ -1,3 +1,5 @@
+use proc_macro2::TokenStream;
+use quote::{format_ident, quote, quote_spanned, ToTokens};
 use proc_macro2::Span;
 use syn::parse::{Error, Parse, ParseStream, Result};
 use syn::{Attribute, ItemImpl, ItemTrait, Token};
@@ -32,3 +34,15 @@ impl Parse for Item {
         }
     }
 }
+
+
+impl ToTokens for Item {
+    fn to_tokens(&self, tokens: &mut TokenStream) {
+        match self {
+            Item::Trait(item) => item.to_tokens(tokens),
+            Item::Impl(item) => item.to_tokens(tokens),
+        }
+    }
+}
+
+
