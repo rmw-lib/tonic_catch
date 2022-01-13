@@ -10,5 +10,8 @@ use syn::parse_macro_input;
 pub fn tonic_catch(_: TokenStream, input: TokenStream) -> TokenStream {
   let mut item = parse_macro_input!(input as Item);
   expand(&mut item);
-  TokenStream::from(quote!(#item))
+  TokenStream::from(quote!(
+    #[async_trait]
+    #item
+  ))
 }
