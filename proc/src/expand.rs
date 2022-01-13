@@ -1,6 +1,6 @@
 use crate::Item;
 use quote::quote;
-use syn::{ImplItem, parse_quote};
+use syn::{parse_quote, ImplItem};
 
 pub fn expand(input: &mut Item) {
   match input {

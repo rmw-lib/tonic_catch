@@ -32,7 +32,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "tonic_catch"
+name = "tonic_catch_proc"
 version = "0.1.0"
 dependencies = [
  "proc-macro2",
