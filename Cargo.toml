@@ -1,0 +1,15 @@
+[package]
+name = "tonic_catch"
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+description = "catch any tonic await error convert into Status"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0.36"
+quote = "1.0.14"
+syn = "1.0.85"
