@@ -1,6 +1,5 @@
-pub use tonic_catch_proc::tonic_catch;
-
 use tonic::{Response, Status};
+pub use tonic_catch_proc::tonic_catch;
 
 pub type Result<T> = std::result::Result<Response<T>, Status>;
 
