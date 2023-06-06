@@ -6,7 +6,7 @@ pub fn expand(input: &mut Item) {
   match input {
     Item::Impl(input) => {
       for inner in &mut input.items {
-        if let ImplItem::Method(method) = inner {
+        if let ImplItem::Fn(method) = inner {
           let block = &mut method.block;
           let stmts = &block.stmts;
 
