@@ -10,5 +10,4 @@ repository = "https://github.com/rmw-lib/tonic_catch"
 [dependencies]
 anyhow = "1.0.52"
 tonic = "0.6.2"
-tonic_catch_proc = "0.1.1"
-#tonic_catch_proc =  {path = "./proc"}
+tonic_catch_proc = { path = "./proc", version = "0.1.1" }
